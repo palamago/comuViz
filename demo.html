@@ -9,14 +9,17 @@
 
 	function initCB(instance) {
 	   	ge = instance;
+	   	
 	   	ge.getWindow().setVisibility(true);
+	   	ge.getNavigationControl().setVisibility(ge.VISIBILITY_AUTO);
+
 	   	google.earth.fetchKml(ge, 'https://raw.github.com/palamago/comuViz/master/comunas-poblacion.kml', function(kmlObject) {
 		    if(kmlObject) {
 				ge.getFeatures().appendChild(kmlObject);
 			}
 		});
 
-		ge.getOptions().setFlyToSpeed(0.5);
+		ge.getOptions().setFlyToSpeed(0.4);
 
 		var lookAt = ge.getView().copyAsLookAt(ge.ALTITUDE_RELATIVE_TO_GROUND);
 		

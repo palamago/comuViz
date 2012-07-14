@@ -4,6 +4,8 @@ Visualización de la cantidad de habitantes por comuna de la Ciudad Autónoma de
 
 *Nota: El demo 3D requiere tener instalado el plugin de Google Earth para el browser con el que se esté accediendo*
 
+## Demos
+* [Demo 3D](http://alanreid.com.ar/comuViz/3d/index.html) 
 
 ## Fuente de la información
 * [GCBA Data](http://data.buenosaires.gob.ar/dataset/mapa-comunas) 

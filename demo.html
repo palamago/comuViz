@@ -15,14 +15,22 @@
 				ge.getFeatures().appendChild(kmlObject);
 			}
 		});
+
+		ge.getOptions().setFlyToSpeed(0.5);
+
+		var lookAt = ge.getView().copyAsLookAt(ge.ALTITUDE_RELATIVE_TO_GROUND);
+		
+		lookAt.setLatitude(-34.62);
+		lookAt.setLongitude(-58.44);
+		lookAt.setRange(lookAt.getRange() / 800.0);
+		lookAt.setTilt(50);
+		ge.getView().setAbstractView(lookAt);
 	}
 
 	function failureCB(errorCode) { }
 
 	function init() {
-	  	google.earth.createInstance('map', initCB, failureCB);
-
-		
+	  	google.earth.createInstance('map', initCB, failureCB);		
 	}
 
 	google.setOnLoadCallback(init);

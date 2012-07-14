@@ -3,9 +3,10 @@
 <head>
 	<meta charset="utf-8" />
 	<style type="text/css">
-		body { background-color:#F1F1F1 }
-		#map { width:960px; height:600px; margin:50px auto 20px auto; box-shadow:0 0 20px #000 }
-		#source { color:#666; font:8pt Arial; text-align:center }
+		body { background-color:#F1F1F1; font-family:Arial; color:#666 }
+		#description { text-align:center; margin:20px 0; font-size:10pt }
+		#map { width:960px; height:600px; margin:20px auto 20px auto; box-shadow:0 0 20px #000 }
+		#source { font-size:8pt; text-align:center }
 		#source a { color:#0000FF; text-decoration:none }
 		#source a:hover { text-decoration:underline }
 	</style>
@@ -49,6 +50,7 @@
 	</script>
 </head>
 <body>
+	<div id="description">Visualización de cantidad de habitantes por comuna de la Ciudad Autónoma de Buenos Aires.</div>
 	<div id="map"></div>
 	<div id="source">Fuente: <a target="_blank" href="http://data.buenosaires.gob.ar/dataset/mapa-comunas">GCBA Data</a> e <a target="_blank" href="http:/www.censo2010.indec.gov.ar/resultadosdefinitivos.asp">Indec</a>. Código en <a target="_blank" href="https://github.com/palamago/comuViz">Github</a></div>
 </body>

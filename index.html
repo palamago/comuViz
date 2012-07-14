@@ -13,7 +13,7 @@
   </head>
   <body>
 
-    <div id="map" style="height: 200px"></div>
+    <div id="map" style="height: 500px;width: 500px;"></div>
 
    <script type="text/javascript">
     $(document).ready(function(){
@@ -28,8 +28,11 @@
 
       geojson.addGeoJSON(geo);
 
-      map.addLayer(geojson);
+      var BA = new L.LatLng(-34.62,-58.44 );
 
+      map.setView(BA, 11);
+
+      map.addLayer(geojson);
 
     });
 

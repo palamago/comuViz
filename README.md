@@ -7,7 +7,7 @@ Visualización de la cantidad de habitantes por comuna de la Ciudad Autónoma de
 
 ## Fuente de la información
 * [GCBA Data](http://data.buenosaires.gob.ar/dataset/mapa-comunas) 
-* [Censo 2010 (Indec)](www.censo2010.indec.gov.ar/resultadosdefinitivos.asp)
+* [Censo 2010 (Indec)](http://www.censo2010.indec.gov.ar/resultadosdefinitivos.asp)
 
 
 ## Datos útiles

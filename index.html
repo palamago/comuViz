@@ -4,15 +4,34 @@
     <title>comuViz</title>
     <link rel="stylesheet" media="all" type="text/css" href="style.css" />
     <link rel="stylesheet" media="all" type="text/css" href="leaflet.css" />
+    <script type="text/javascript" src="poblacion.js"></script>
+    <script type="text/javascript" src="geo.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="leaflet.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    
   </head>
   <body>
-    
-  <script type="text/javascript" src="poblacion.js"></script>
-  <script type="text/javascript" src="main.js"></script>
-  <script type="text/javascript" src="leaflet.js"></script>
 
-  <script>
+    <div id="map" style="height: 200px"></div>
 
+   <script type="text/javascript">
+    $(document).ready(function(){
+
+      var map = new L.Map('map');
+     
+      var geojson = new L.GeoJSON();
+
+      geojson.on('featureparse', function(e) {
+
+      });
+
+      geojson.addGeoJSON(geo);
+
+      map.addLayer(geojson);
+
+
+    });
 
   </script>
 

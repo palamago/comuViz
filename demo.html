@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+	<script type="text/javascript">
+	var ge;
+
+	google.load("earth", "1");
+
+	function initCB(instance) {
+	   	ge = instance;
+	   	ge.getWindow().setVisibility(true);
+	   	google.earth.fetchKml(ge, 'https://raw.github.com/palamago/comuViz/master/comunas-poblacion.kml', function(kmlObject) {
+		    if(kmlObject) {
+				ge.getFeatures().appendChild(kmlObject);
+			}
+		});
+	}
+
+	function failureCB(errorCode) { }
+
+	function init() {
+	  	google.earth.createInstance('map', initCB, failureCB);
+
+		
+	}
+
+	google.setOnLoadCallback(init);
+
+	</script>
+</head>
+<body>
+	<div id="map" style="height: 400px; width: 600px;"></div>
+</body>
+</html>

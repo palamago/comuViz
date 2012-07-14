@@ -13,7 +13,7 @@
 	   	ge.getWindow().setVisibility(true);
 	   	ge.getNavigationControl().setVisibility(ge.VISIBILITY_AUTO);
 
-	   	google.earth.fetchKml(ge, 'https://raw.github.com/palamago/comuViz/master/comunas-poblacion.kml', function(kmlObject) {
+	   	google.earth.fetchKml(ge, 'https://raw.github.com/palamago/comuViz/master/3d/comunas-poblacion.kml', function(kmlObject) {
 		    if(kmlObject) {
 				ge.getFeatures().appendChild(kmlObject);
 			}
